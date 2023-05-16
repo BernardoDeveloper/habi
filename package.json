@@ -1,0 +1,25 @@
+{
+  "name": "habi",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@unocss/reset": "^0.51.12",
+    "framer-motion": "^10.12.10",
+    "iconsax-react": "^0.0.8",
+    "preact": "^10.13.1",
+    "wouter": "^2.10.1"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.5.0",
+    "@unocss/preset-web-fonts": "^0.51.12",
+    "typescript": "^5.0.2",
+    "unocss": "^0.51.12",
+    "vite": "^4.3.2"
+  }
+}
