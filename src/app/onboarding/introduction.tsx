@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'preact/hooks'
 import { useLocation } from 'wouter'
 import { pageAnimation } from '../../utils/animation'
+import { Secondary } from '../../components/textColor'
 
 import img1 from '../../assets/Incentivate.svg'
 import img2 from '../../assets/Habits.svg'
@@ -21,22 +22,36 @@ export function Introduction() {
         {
             id: 0,
             title: 'welcome to\n monumental habits',
-            description:
-                'We can help you to be a better\n version of yourself.',
+            description: (
+                <span>
+                    We can <Secondary>help you</Secondary> to be a better <br />
+                    version of <Secondary>yourself.</Secondary>
+                </span>
+            ),
             imgSrc: img1,
         },
         {
             id: 1,
             title: 'create new\n habit easily',
-            description:
-                'Good habits influence many things\n in your daily life.',
+            description: (
+                <span>
+                    Good habits <Secondary>influence</Secondary> many things
+                    <br />
+                    in your daily <Secondary>life.</Secondary>
+                </span>
+            ),
             imgSrc: img2,
         },
         {
             id: 2,
             title: 'keep track of your\n progress',
-            description:
-                'Visualizing your progress\n can help you keep constant.',
+            description: (
+                <span>
+                    Visualizing your progress
+                    <br />
+                    can help you keep <Secondary>constant.</Secondary>
+                </span>
+            ),
             imgSrc: img3,
         },
     ]
@@ -60,9 +75,9 @@ export function Introduction() {
 
                             <img src={page.imgSrc} className="max-h-96" />
 
-                            <pre className="font-bold text-base text-center font-manrope text-base">
+                            <p className="font-bold text-base text-center font-manrope text-base">
                                 {page.description}
-                            </pre>
+                            </p>
 
                             {setPosition(i)}
                         </>
